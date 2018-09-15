@@ -1,0 +1,14 @@
+function _draw()
+  cls()
+  local t = time() / 4
+  local am = 10
+
+  for i = 1, am do
+    local a = t + i / am
+    local d = cos(t + i % 2 * 0.5) * 16 + 32
+    local x = cos(a) * d + 64
+    local y = sin(a) * d + 64
+
+    circ(x, y, 3, i % 2 == 0 and 8 or 13)
+  end
+end
